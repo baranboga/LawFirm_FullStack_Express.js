@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head")  %> 
+</head>
+    <body>
+        
+        <%- include("../partials/nav")  %> 
+  <!-- Contact Start -->
+  <div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="text-center pb-2">
+
+            <h1 class="mb-4" style="color:#B49C73">İletişim Bilgileri</h1>
+            <div class="row bg-secondary" style="margin-top: 100px; ">
+                <div class="col-lg-4">
+                    <div class="d-flex justify-content-lg-center p-4">
+                        <i class="fa fa-2x fa-map-marker-alt text-primary"></i>
+                        <div class="ml-3">
+                            <h5 class="text-white">Adres</h5>
+                            <p class="m-0">Altayçeşme Mah. Bolayır Sk.
+                                Şebnem Apt. No:1 Daire:2
+                                Maltepe/İstanbul</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="d-flex justify-content-lg-center p-4">
+                        <i class="fa fa-2x fa-envelope-open text-primary"></i>
+                        <div class="ml-3">
+                            <h5 class="text-white">Mail </h5>
+                            <p class="m-0">yasemin@topsakalhukuk.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="d-flex justify-content-lg-center p-4">
+                        <i class="fa fa-2x fa-phone-alt text-primary"></i>
+                        <div class="ml-3">
+                            <h5 class="text-white">Telefon</h5>
+                            <p class="m-0">0539 462 71 15</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row " style="margin-top: 130px;">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="contact-form bg-secondary p-3">
+                    <div id="success"></div>
+                    <h3 style="color:#B49C73" class="text-center">İletişim Formu</h3>
+                    <form method="post">
+                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                        <div class="form-row">
+                            <div class="col-sm-6 control-group">
+                                <input type="text" class="form-control p-4" id="name" name="adsoyad" placeholder="Ad Soyad"
+                                    required="required" data-validation-required-message="Please enter your name" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="col-sm-6 control-group">
+                                <input type="email"  required="required" name="email" class="form-control p-4" id="email" placeholder="Mail"
+                                    data-validation-required-message="Please enter your email" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <input type="text"  required="required" name="konu" class="form-control p-4" id="subject" placeholder="Konu"
+                                data-validation-required-message="Please enter a subject" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="control-group">
+                            <textarea class="form-control p-4"  required="required" name="mesaj" rows="6" id="message" placeholder="Mesaj"
+                                
+                                data-validation-required-message="Please enter your message"></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary btn-block" type="submit"
+                                id="sendMessageButton">Gönder</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-6" style="min-height: 400px;">
+                <div class="position-relative h-100 rounded overflow-hidden">
+                    <iframe style="width: 100%; height: 100%; object-fit: cover;"
+                        src="https://www.google.com/maps/place/Topsakal+%26+Bo%C4%9Fa+Hukuk+B%C3%BCrosu/@40.9258662,29.130326,15z/data=!4m6!3m5!1s0x14cac7c66622585f:0x1e46d0c6bd54defd!8m2!3d40.9258662!4d29.130326!16s%2Fg%2F11s94njwpn?entry=ttu"
+                        frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                        tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact End -->
+
+
+<!-- Footer Start -->
+<div class="container-fluid bg-secondary text-white pt-5 px-sm-3 px-md-5" style="margin-top: 90px;">
+
+
+
+
+
+    <div class="row p-4 mt-5 mx-0" style="background: rgba(256, 256, 256, .05);">
+        <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+            <p class="m-0 text-white"><a href="">&copy;</a> <a class="font-weight-bold" href="#">Topsakal & Boğa
+                    Hukuk Bürosu</a>. Tüm hakları saklıdır.</p>
+        </div>
+
+    </div>
+</div>
+<!-- Footer End -->
+
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-primary px-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/tempusdominus/js/moment.min.js"></script>
+<script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+<script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+<!-- Contact Javascript File -->
+<script src="mail/jqBootstrapValidation.min.js"></script>
+<script src="mail/contact.js"></script>
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+</body>

@@ -1,0 +1,102 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3  " style="background-color: black">
+            <div class="row">
+                <div class="col-4 mt-4">
+                    <a href="/" class="navbar-brand d-flex  justify-content-center">
+                        <!-- <h2 class="m-0 display-4 text-primary text-uppercase"></h2> -->
+                        <img src="/static/img/LOGO.jpeg" style="max-height: 150px; max-width: 100%; margin: 10px;"/>
+
+                    </a>
+                </div>
+                <div class="col-8 mt-5">
+                    <h5 style="color:#B49C73" class="mx-2">Topsakal & Boğa</h5>
+                    <p style="color:#B49C73" class="mx-4 mt-1"> Hukuk Bürosu</p>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col-lg-9">
+            <div class="row bg-white border-bottom d-none d-lg-flex">
+                <div class="col-lg-7 text-left">
+                    <div class="h-100 d-inline-flex align-items-center py-2 px-3">
+                        <i class="fa fa-envelope text-primary mr-2"></i>
+                        <small>yasemin@topsakalhukuk.com</small>
+                    </div>
+                    <div class="h-100 d-inline-flex align-items-center py-2 px-2">
+                        <i class="fa fa-phone-alt text-primary mr-2"></i>
+                        <small>0539 462 71 15</small>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-right">
+                    <div class="d-inline-flex align-items-center p-2">
+
+
+                        <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+
+
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
+
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav mr-auto py-0">
+
+
+
+                        <% if (!isAuth) { %>
+                            <a href="/" class="nav-item nav-link active">Anasayfa</a>
+                            <a href="/about" class="nav-item nav-link">Hakkımızda</a>
+                            <a href="/work" class="nav-item nav-link">Çalışma Alanlarımız</a>
+                            <a href="/team" class="nav-item nav-link">Ekibimiz</a>
+                            <a href="/blogs" class="nav-item nav-link ">Yazılarımız</a>
+                            <a href="/contact" class="nav-item nav-link">İletişim</a>
+                        <% } %>
+
+                            <% if (isAuth) { %>
+                             
+                              
+                                 <li>
+                                    <a href="/admin/blog/create" class="nav-item nav-link">YazıEkle</a>
+                                 </li>
+                                <li>
+                                    <a href="/admin/blogs" class="nav-item nav-link">YazılarPanel</a>
+                                </li>
+                                <li>
+                                    <a href="/admin/category/create" class="nav-item nav-link">KategoriEkle</a>
+                                </li>
+                               <li>
+                                <a href="/admin/categories" class="nav-item nav-link">Kategoripanel</a>
+                               </li>
+                               <li>
+                                <a href="/blogs" class="nav-item nav-link ">Yazılarımız</a>
+                               </li>
+                               
+                               <li>
+                                <a href="/account/logout" class="nav-item nav-link">Logout</a>
+                               </li>
+                                <li style="margin-top: 25px;margin-left: 200px;">
+                                    <h4><%= fullname %> </h4>
+                                </li>
+                                
+                               
+
+                            <% } %>
+                      
+                       
+                      
+                      
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
