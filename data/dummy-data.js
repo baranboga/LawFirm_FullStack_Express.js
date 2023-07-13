@@ -12,13 +12,7 @@ async function populate() {                        // Dumydata created
 
     if(count == 0) {                             //İf count of categories is equal to zero, the following functions will start and crate data's
  
-    //     const users = await User.bulkCreate([      //proje ilk çalıştığında tabloya eklenecek olan user bilgileri
-    //     {fullname: "sadık turan", email: "info@sadikturan.com", password: await bcrypt.hash("135790", 10)},
-    //     {fullname: "çınar turan", email: "info@cinarturan.com", password: await bcrypt.hash("135790", 10)},
-    //     {fullname: "ada bilgi", email: "info@adabilgi.com", password: await bcrypt.hash("135790", 10)},
-    //     {fullname: "yiğit bilgi", email: "info@yigitbilgi.com", password: await bcrypt.hash("135790", 10)},
-    //     {fullname: "ahmet yılmaz", email: "info@agmetyilmaz.com", password: await bcrypt.hash("135790", 10)},
-    // ]);
+ 
 
         const categories = await Category.bulkCreate([                            //kategori sayısı 0 a eşit ise kategorileri yaratırız.
             { name: "Sağlık Hukuku",url: slugField("Sağlık Hukuku"), },
@@ -28,7 +22,7 @@ async function populate() {                        // Dumydata created
         ]);
 
         const users = await User.bulkCreate([
-            {fullname: "Av.Yasemin Topsakal", email: "yasemin_topsakal@hotmail.com", password: await bcrypt.hash("ysmn1234", 10)},
+            {fullname: "", email: "", password: await bcrypt.hash("", 10)},
             
         ]);
 
